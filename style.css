@@ -1,0 +1,212 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body, html {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.mobile-container {
+    width:100%;
+    margin: 0px;
+    background-color: white;
+    height: 100%;
+    color: black;
+    border-radius: 10px;
+}
+
+.topnav{
+    border-bottom: 1px solid rgba(71, 70, 70, 0.2);
+}
+
+.topnav, .dropdown {
+    overflow: hidden;
+    position: relative;
+    height:auto;
+    min-height: 50px;
+}
+
+.topnav #myLinks, .dropdown-content {
+    display: none;
+    margin: 60px;
+    z-index: 2;
+}
+
+.topnav a, .dropdown-content a{
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+.topnav a.icon, .dropbtn {
+    background: transparent;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.topnav a:hover {
+    background-color: transparent;
+    color: black;
+}
+
+.active {
+    background-color: transparent;
+    color: black;
+    right:0px;
+    top: 0px;
+    position: absolute;
+}
+
+.main{
+    padding: 15px;
+}
+
+.dropbtn{
+    padding:16px;
+    border-radius: 8px;
+    border: 1px solid rgba(51, 50, 50, 0.5);
+}
+
+.subcon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.subcon p{
+    width: 50%;
+    text-align: center;
+}
+
+.profile, .views, .btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: 32px;
+}
+
+.views, .btns{
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.profile {
+    margin-top: 10px;
+}
+
+.btns{
+    justify-content: flex-end;
+}
+
+.displaycon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap:64px;
+    width: 100%;
+}
+
+.img{
+    width: 75%;
+    height:256px;
+    object-fit: contain;
+    background-color: rgba(0, 187, 255, 0.53);
+    padding: 16px;
+    border-radius: 16px;
+    position: relative;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.display:hover + .info,.info:hover, display:hover + .info{
+    display: flex;
+}
+
+.fsave, .flike{
+    padding: 7px 15px;
+    color: rgb(55, 54, 54);
+    background-color: white;
+    border-radius: 8px;
+}
+
+.info{
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 125px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(180deg, transparent 25%, rgba(0, 0, 0, 0.4) 75%);
+    color: black;
+    border-radius: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.img:hover + .info,.info:hover, img:hover + .info{
+    display: flex;
+}
+
+.iname{
+    color: white;
+}
+
+.btns, .iname{
+    margin-bottom: 20px;
+}
+
+.name{
+    display: flex;
+    gap: 4px;
+}
+
+@media only screen and (max-width: 689px) {
+    .subcon p{
+        width: 100%;
+    }
+    
+    .profile, .views, .btns{
+        width: 100%;
+    }
+    
+    .display{
+        width: 75%;
+    }
+
+    .img{
+        width: 100%;
+    }
+}

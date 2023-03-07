@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <!-- Simulate a smartphone / tablet -->
+    <div class="mobile-container">
+
+        <!-- Top Navigation Menu -->
+        <div class="topnav">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars" id="cbtn"></i>
+            </a>
+
+            <div id="myLinks">
+                <a href="#home">Home &nbsp; <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                <a href="#futurama">Futurama &nbsp; <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                <a href="#characters">Characters &nbsp; <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                <a href="#gopro">Go Pro &nbsp; <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                <a href="#cuschar">Custom Character &nbsp; <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+            </div>
+            <a href="#home" class="active">Sign-In</a>
+        </div>
+
+        <!-- Main Container--->
+        <div class="main">
+            <div class="drop">
+                <div class="dropdown">
+                    <button id="btndrop" class="dropbtn" onclick="myFunction2()">Popular &nbsp; <i
+                            class="fa fa-caret-down" aria-hidden="true"></i></button>
+                    <div class="dropdown-content" id="dropcnt">
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="subcon">
+                <h1>Futurama</h1>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, natus voluptates iusto quo consequatur
+                    delectus aut voluptas, expedita, aperiam magnam facere esse. Fugit, ad quia possimus quasi quo
+                    fugiat expedita.
+                </p>
+            <br>
+            <br>
+            </div>
+            <div class="displaycon" id="dcon">
+                <div class="display">
+                    <div class="info">
+                        <div class="iname"></div>    
+                        <div class="btns">
+                            <div class="fsave">
+                                <i class="fa fa-solid fa-folder"></i>
+                            </div>
+                            <div class="flike">
+                                <i class="fa fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <img src="MidSem Time Table.png">
+                        <div class="info">
+                            <div class="iname"></div>    
+                            <div class="btns">
+                                <div class="fsave">
+                                    <i class="fa fa-solid fa-folder"></i>
+                                </div>
+                                <div class="flike">
+                                    <i class="fa fa-solid fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <div class="name">
+                            <i class="fa fa-solid fa-user"></i> Bender
+                        </div>
+                        <div class="views">
+                            <div class="likes">
+                                <i class="fa fa-solid fa-heart"></i> 67
+                            </div>
+                            <div class="view">
+                                <i class="fa fa-solid fa-eye"></i> 6.5k
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End smartphone / tablet look -->
+    </div>
+
+</body>
+
+</html>
