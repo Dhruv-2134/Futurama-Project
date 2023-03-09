@@ -26,8 +26,10 @@ function myFunction2() {
 document.addEventListener("DOMContentLoaded", async () => {
     const dcon = document.getElementById("dcon");
 
-    const data = (await (await fetch("https://api.sampleapis.com/futurama/characters")).json()).slice(0, 4);
+    const Data = (await (await fetch("https://api.sampleapis.com/futurama/characters")).json());
+    const data = Data.slice(0, 4);
     const res = [];
+    let i = 0;
     for (const d of data) {
         res.push(`
         <div class="display">
@@ -48,7 +50,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     </div>
                     </div>
                     <div class="profile">
-                        <div class="name">
+                        <div class="name" id="${i}" onmouseenter="showPop(this)" onmouseleave="hidePop(this)">
                             <span class="fa fa-solid fa-user"></span> ${d.name.first}
                         </div>
                         <div class="views">
@@ -60,11 +62,65 @@ document.addEventListener("DOMContentLoaded", async () => {
                             </div>
                         </div>
                     </div>
+                    <div class="popup" id="${i}" onmouseenter="showPop(this)" onmouseleave="hidePop(this)">
+                    <div class="topup">
+                        <div class="left">
+                            <div class="icon"><img src="${d.images.main}"></div>
+                            <div class="aniname">
+                                <div class="firstname">
+                                ${d.name.first} ${d.name.last}
+                                </div>
+                                <div class="location">
+                                ${d.species}, ${d.homePlanet}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            + Follow
+                        </div>
+                    </div>
+                    <div class="imgs">
+                        <img src="${Data[i+1].images.main}" alt="" class="immm">
+                        <img src="${Data[i+2].images.main}" alt="" class="immm">
+                        <img src="${Data[i+3].images.main}" alt="" class="immm">
+                    </div>
+                </div>
         </div>
         `)
+        i++;
     }
 
     dcon.innerHTML = res.join("");
 
 });
+var checker  = [false];
 
+function showPop(e) {
+    //console.log(e)
+    if (e.classList?.contains("name")) {
+        //console.log({ target: e })
+        e.parentNode.parentNode.childNodes[5].style.display = "flex";
+        checker[e.id] = true;
+    }
+    if (e.classList?.contains("popup")) {
+        //console.log({ target: e })
+        e.style.display = "flex";
+        checker[e.id] = true;
+    }
+}
+function hidePop(e) {
+    if (e.classList?.contains("name") || e.classList?.contains("popup")) {
+        checker[e.id] = false;
+    }
+    setTimeout(() => {
+        //console.log(checker)
+        if(e.classList?.contains("name") && !checker[e.id] ) {
+            //console.log({ target: e.target })
+            e.parentNode.parentNode.childNodes[5].style.display = "none";
+        }
+        if (e.classList?.contains("popup") && !checker[e.id]) {
+            //console.log({ target: e.target })
+            e.style.display = "none";
+        }
+    }, 250);
+}  
