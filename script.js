@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     dcon.innerHTML = res.join("");
 
 });
-var checker  = [false];
+var checker  = [];
 
 function showPop(e) {
     //console.log(e)

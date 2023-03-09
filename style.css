@@ -255,7 +255,7 @@ body, html {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: rgba(143, 141, 141, 0.763);
+    background-color: rgba(150, 145, 145, 0.4);
     padding: 8px;
     border-radius: 8px;
     width: 150px;
@@ -265,16 +265,18 @@ body, html {
 .popup .imgs {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     width:75%;
     height:75%;
+    gap:40px;
 }
 
 .immm {
     width: 30%;
     height:60%;
     border-radius: 8px;
+    background-color: rgba(150, 145, 145, 0.4);
 }
 
 .name:hover > .popup {
