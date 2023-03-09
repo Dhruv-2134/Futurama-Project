@@ -31,9 +31,14 @@ body, html {
     min-height: 50px;
 }
 
+.dropdown .dropbtn{
+    cursor: pointer;
+}
+
 .topnav #myLinks, .dropdown-content {
     display: none;
-    margin: 60px;
+    margin: 10px;
+    margin-top: 60px;
     z-index: 2;
 }
 
@@ -97,6 +102,7 @@ body, html {
     align-items: center;
     width: 50%;
     height: 32px;
+    cursor: pointer;
 }
 
 .views, .btns{
@@ -157,6 +163,7 @@ body, html {
     color: rgb(55, 54, 54);
     background-color: white;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .info{
@@ -191,6 +198,7 @@ body, html {
 .name{
     display: flex;
     gap: 4px;
+    cursor: pointer;
 }
 
 
@@ -260,6 +268,7 @@ body, html {
     border-radius: 8px;
     width: 150px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .popup .imgs {
@@ -283,6 +292,26 @@ body, html {
     display: flex;
 }
 
+.searchbar{
+    background-color: rgba(150, 145, 145, 0.4);
+    border-radius: 8px;
+    width: 240px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 16px;
+    color: black;
+    padding: 10px;
+}
 
 @media only screen and (max-width: 689px) {
     .subcon p{
