@@ -20,6 +20,8 @@ body, html {
     border-radius: 10px;
 }
 
+
+/* Navbar CSS Starts */
 .topnav{
     border-bottom: 1px solid rgba(71, 70, 70, 0.2);
 }
@@ -71,9 +73,13 @@ body, html {
     position: absolute;
 }
 
+/* Navbar CSS Ends */
+
 .main{
     padding: 15px;
 }
+
+/* Drop Button CSS Starts*/
 
 .dropbtn{
     padding:16px;
@@ -81,6 +87,10 @@ body, html {
     border: 1px solid rgba(51, 50, 50, 0.5);
 }
 
+/* Drop Button CSS Ends*/
+
+
+/* Description CSS Starts*/
 .subcon{
     display: flex;
     flex-direction: column;
@@ -94,6 +104,10 @@ body, html {
     width: 50%;
     text-align: center;
 }
+
+/* Description CSS Ends*/
+
+/* CSS for the images being fetched starts */
 
 .profile, .views, .btns{
     display: flex;
@@ -291,6 +305,8 @@ body, html {
 .name:hover > .popup {
     display: flex;
 }
+
+/* CSS for the images being fetched ends */
 
 .searchbar{
     background-color: rgba(150, 145, 145, 0.4);
